@@ -1,0 +1,385 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    color: #1d2939;
+
+    line-height: 1.6;
+
+    /*
+       Achtergrondafbeelding.
+       De afbeelding staat in:
+       images/strand.png.jpeg
+    */
+    background-image:
+        linear-gradient(
+            rgba(240, 245, 247, 0.72),
+            rgba(240, 245, 247, 0.72)
+        ),
+        url("../images/strand.png.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   Header
+   ========================= */
+
+.site-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 40px;
+
+    background-color: rgba(255, 255, 255, 0.94);
+
+    border-bottom: 1px solid #d9e0e5;
+}
+
+
+/* =========================
+   Logo
+   ========================= */
+
+.logo-link {
+    display: flex;
+
+    align-items: center;
+}
+
+.logo {
+    width: 58px;
+
+    height: 58px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   Navigatie
+   ========================= */
+
+nav {
+    display: flex;
+
+    gap: 12px;
+}
+
+.nav-button {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    color: #17324d;
+
+    background-color: #ffffff;
+
+    border: 1px solid #cbd5df;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+/* Als je met je muis over een button gaat */
+
+.nav-button:hover {
+    background-color: #17324d;
+
+    color: white;
+}
+
+
+/* Button van de pagina waarop je bent */
+
+.nav-button.active {
+    background-color: #17324d;
+
+    color: white;
+}
+
+
+/* =========================
+   Hero
+   ========================= */
+
+.hero {
+    max-width: 1000px;
+
+    margin: 70px auto 30px;
+
+    padding: 0 20px;
+}
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0.93);
+
+    padding: 40px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Kleine tekst boven de titel */
+
+.eyebrow {
+    margin-top: 0;
+
+    color: #55738c;
+
+    font-size: 0.85rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   Titels
+   ========================= */
+
+h1 {
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
+    color: #17324d;
+
+    font-size: 3rem;
+}
+
+h2 {
+    margin-top: 0;
+
+    color: #17324d;
+
+    font-size: 2rem;
+}
+
+h3 {
+    color: #17324d;
+}
+
+
+/* =========================
+   Algemene content
+   ========================= */
+
+.content-section {
+    max-width: 1000px;
+
+    margin: 0 auto 30px;
+
+    padding: 0 20px;
+}
+
+
+/* =========================
+   Interesses
+   ========================= */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.info-card {
+    padding: 25px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d9e0e5;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   Projecten
+   ========================= */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.project-card {
+    padding: 25px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d9e0e5;
+
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.project-number {
+    color: #55738c;
+
+    font-size: 0.85rem;
+
+    font-weight: bold;
+}
+
+.technology {
+    color: #55738c;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   Blog
+   ========================= */
+
+.blog-post {
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    background-color: #ffffff;
+
+    border-left: 4px solid #17324d;
+
+    border-radius: 8px;
+}
+
+.blog-date {
+    color: #55738c;
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+    margin-top: 60px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.94);
+
+    border-top: 1px solid #d9e0e5;
+}
+
+
+/* =========================
+   Tablet
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        padding: 15px 25px;
+    }
+
+    .info-grid,
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* =========================
+   Mobiel
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .site-header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    nav {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .nav-button {
+        padding: 9px 13px;
+    }
+
+    .hero {
+        margin-top: 30px;
+
+        padding: 0 15px;
+    }
+
+    .content-section {
+        padding: 0 15px;
+    }
+
+    .content-box {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .info-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
